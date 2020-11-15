@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Blog\CategoryController;
+use App\Http\Controllers\Blog\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +17,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+$args = [
+    'as' => 'blog.',
+];
+Route::group($args, function() {
+    Route::resource('posts', PostController::class)
+        ->names('posts');
+
+    Route::get('categories/{category}/posts', [CategoryController::class, 'posts'])
+        ->name('categories.posts');
 });
 
 Auth::routes();

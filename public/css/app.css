@@ -1,0 +1,18 @@
+#app {
+  font-family: "Roboo", sans-serif;
+}
+
+.post {
+  position: relative;
+}
+
+.post .thumbnail-img {
+  position: relative;
+  width: 520px;
+}
+
+.post .head {
+  display: flex;
+  justify-content: space-between;
+}
+
