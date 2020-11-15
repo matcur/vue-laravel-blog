@@ -1,6 +1,7 @@
 <?php
 
 use App\Admin\Controllers\AdminPostController;
+use App\Admin\Controllers\HomeController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
@@ -12,6 +13,6 @@ $args = [
     'as'            => config('admin.route.prefix') . '.',
 ];
 Route::group($args, function (Router $router) {
-    $router->get('/', 'HomeController@index')->name('home');
+    $router->get('/', [HomeController::class, 'index'])->name('home');
     $router->resource('posts', AdminPostController::class);
 });

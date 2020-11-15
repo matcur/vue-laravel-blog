@@ -68,7 +68,7 @@ return [
         'admin' => [
             'driver' => 'local',
             'root' => public_path(),
-            'url' => asset(''),
+            'url' => public_path(),
             'visibility' => 'public',
         ]
 
