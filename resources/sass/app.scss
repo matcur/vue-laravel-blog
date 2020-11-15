@@ -1,6 +1,9 @@
 // Variables
 @import 'variables';
 
+@import 'show-post';
+@import 'comments';
+
 #app {
   font-family: 'Roboo', sans-serif;
 }
@@ -16,4 +19,3 @@
     justify-content: space-between;
   }
 }
-

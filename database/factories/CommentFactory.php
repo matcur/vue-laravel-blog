@@ -28,6 +28,7 @@ class CommentFactory extends Factory
         return [
             'content' => $faker->realText(),
             'user_id' => $userId,
+            'created_at' => $faker->dateTimeBetween('-7 days'),
         ];
     }
 }

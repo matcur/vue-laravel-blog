@@ -2,15 +2,15 @@
 
 @section('content')
   <div class="container">
+    <div class="col-md-11">
     <div class="row justify-content-center">
-      <div class="card card-body">
         <div class="show-post">
-          <span class="title">
-            {{ $post->tilte }}
-          </span>
+          <h2 class="title">
+            {{ $post->title }}
+          </h2>
           @if($post->thumbnail_path)
             <div class="thumbnail">
-              <img src="{{ $post->thumbnail_path }}" alt="" class="thumbnail-img">
+              <img src="{{ asset($post->thumbnail_path) }}" alt="" class="thumbnail-img">
             </div>
           @endif
           <div class="content">
@@ -28,9 +28,9 @@
         </div>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="card card-body">
-        @include('blog.includes.comments', ['rootComments' => $post->rootComments, 'deep' => 0])
+    <div class="row">
+      <div class="col-md-5">
+        @include('blog.includes.comments', ['comments' => $post->rootComments])
       </div>
     </div>
   </div>

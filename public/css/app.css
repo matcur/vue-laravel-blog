@@ -1,3 +1,25 @@
+.show-post .title {
+  text-align: center;
+}
+
+.show-post .thumbnail {
+  display: flex;
+  justify-content: center;
+}
+
+.show-post .thumbnail-img {
+  width: 600px;
+}
+
+.comments {
+  position: relative;
+  margin-top: 30px;
+}
+
+.root-comment .replies {
+  padding-left: 25px;
+}
+
 #app {
   font-family: "Roboo", sans-serif;
 }

@@ -1,0 +1,10 @@
+.comments {
+  position: relative;
+  margin-top: 30px;
+}
+
+.root-comment {
+  .replies {
+    padding-left: 25px;
+  }
+}
